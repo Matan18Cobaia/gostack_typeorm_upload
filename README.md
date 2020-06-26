@@ -79,5 +79,6 @@ Transaction 2 - --- Verify category (doesn't exist) ----- save category --- save
 
 Transaction 3 - -----Verify category (doesn't exist)--- save category ---- save transaction ------ return Transaction saved
 
+Now, its just run yarn test and see all tests running
 
-
+![](/readmeAssets/testsLog.png)

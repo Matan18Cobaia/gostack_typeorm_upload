@@ -72,7 +72,11 @@ But in multiple transaction, using map() for example, javascript will basically 
 Imagine that here below is ta timeline that each "-" represents a moment in time, and the Transaction 2 and 3 has the same category, when I started a map function to register each transaction, all transaction will start at the same state of project (where category on transaction 2 and 3 doesn't exists), so both transactions will create a new category with the same title, and possibly crash our application (if category title must be Unique for example), or even over populate our database, if the file is too extensive
 
 Transaction 1 - ---- Verify category (exist) ----- save Transaction ----- return Transaction saved
+
+
 Transaction 2 - --- Verify category (doesn't exist) ----- save category --- save transaction ----- return Transaction saved
+
+
 Transaction 3 - -----Verify category (doesn't exist)--- save category ---- save transaction ------ return Transaction saved
 
 

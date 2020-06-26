@@ -36,7 +36,7 @@ class Category {
 
 I will show some interesting thins i learn in this challenge:
 
-1. Use multer lib for nodeJs is a litle simple, I create a file like this:
+1. Use multer lib in nodeJs is a litle simple, I create a file like this:
 
 ```javascript
 export default {
@@ -61,10 +61,10 @@ transactionsRouter.post('/import', multer(upload).single('file'), async (request
   return response.send(transactions)
 });
 ```
-After that, I already got the file in data to use it as I need it
+After that, I already got the file in storage to use it as I need it
 basecally
 2. The function array.map() is not thread-safe:
-The template already has a file service who will be used to create and save a transaction and a new category (if necessary) on database, but in this case of import a file (lot of registers), this will not work if there is repetitive categories, i'll try to explain it:
+The template already has a service file who will be used to create and save a transaction and a new category (if necessary) on database, but in this case of import a file (lot of registers), this will not work if there is repetitive categories, i'll try to explain it:
 
 If I will create a transaction, and the category doesn't exist on database, I will create this category, after that, I will create the transaction.
 But in multiple transaction, using map() for example, javascript will basically separate each transaction, then use in diferents states of program time
